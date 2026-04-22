@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Dikhane Waali Machine</title>
+</head>
+
+<body>
+    <h2>Time showing advanced: </h2>
+    <button onclick="showTime()">Show Time</button><br><br>
+    <div id="time" style="font-size: 25px; font-weight: bold;"></div>
+
+
+
+
+    <script>
+        const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+        let timeDiv = document.getElementById("time");
+
+        
+
+        async function showTime(){
+            timeDiv.innerText = "Hacking NASA server for time...";
+            await sleep(2000);
+
+            timeDiv.innerText = "Connecting to moon base for time...";
+            await sleep(2000);
+
+            timeDiv.innerText = "Recieving data from moon base...";
+            await sleep(2000);
+
+            timeDiv.innerText = "Thala announced one more IPL season to play...";
+            await sleep(2000);
+
+            timeDiv.innerText = "Calculating what is 2+2...";
+            await sleep(2000);
+
+            let date = new Date();
+            timeDiv.innerText = date;
+            let hours = date.getHours();
+            if (hours>=0 && hours<12)alert("Good morning pineapple");
+            else if(hours>=12 && hours<=15) alert("Good AfterNoon");
+            else if(hours>15 && hours<=18) alert("Good evening");
+            else alert("Good night saun jao");
+        }
+    </script>
+</body>
+
+</html>
